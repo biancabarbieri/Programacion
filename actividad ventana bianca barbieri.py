@@ -1,36 +1,65 @@
 import tkinter as tk
 
-def mostrarOpcion1():
+def funcionPolinomica():
     limpiarVentana()
-    label = tk.Label(ventana, text="Elegiste la Opción 1", font=("Arial", 16))
+    label = tk.Label(ventana, text="Ingrese ", font=("Arial", 16))
+    label.pack(pady=20)
+
+    boton_volver = tk.Button(ventana, text="Volver", font=("Arial", 12), command=graficarFuncion)
+    boton_volver.pack(pady=10)
+
+def funcionLogaritmica():
+    limpiarVentana()
+    label = tk.Label(ventana, text="Ingrese ", font=("Arial", 16))
+    label.pack(pady=20)
+
+    boton_volver = tk.Button(ventana, text="Volver", font=("Arial", 12), command=graficarFuncion)
+    boton_volver.pack(pady=10)
+
+def funcionExponencial():
+    limpiarVentana()
+    label = tk.Label(ventana, text="Ingrese ", font=("Arial", 16))
+    label.pack(pady=20)
+
+    boton_volver = tk.Button(ventana, text="Volver", font=("Arial", 12), command=graficarFuncion)
+    boton_volver.pack(pady=10)
+
+
+def graficarFuncion():
+    limpiarVentana()
+    label = tk.Label(ventana, text="graficar la función", font=("Arial", 16))
+    label.pack(pady=20)
+    label = tk.Label(ventana, text="Elija que función", font=("Arial", 16))
+    label.pack(pady=20)
+    boton1 = tk.Button(ventana, text="polinomica", font=("Arial", 12), command=funcionPolinomica)
+    boton1.pack(pady=10)
+    boton_volver = tk.Button(ventana, text="logaritmica", font=("Arial", 12), command=funcionLogaritmica)
+    boton_volver.pack(pady=10)
+    boton_volver = tk.Button(ventana, text="exponencial", font=("Arial", 12), command=funcionExponencial)
+    boton_volver.pack(pady=10)
+    boton_volver = tk.Button(ventana, text="Volver", font=("Arial", 12), command=mostrarMenu)
+    boton_volver.pack(pady=10)
+
+def graficarPuntos():
+    limpiarVentana()
+    label = tk.Label(ventana, text="Graficar la función", font=("Arial", 16))
     label.pack(pady=20)
 
     boton_volver = tk.Button(ventana, text="Volver", font=("Arial", 12), command=mostrarMenu)
     boton_volver.pack(pady=10)
 
-def mostrarOpcion2():
+def encontrarRaices():
     limpiarVentana()
-    label = tk.Label(ventana, text="Elegiste la Opción 1", font=("Arial", 16))
+    label = tk.Label(ventana, text="Graficar puntos específicos sobre la función", font=("Arial", 16))
     label.pack(pady=20)
 
     boton_volver = tk.Button(ventana, text="Volver", font=("Arial", 12), command=mostrarMenu)
     boton_volver.pack(pady=10)
 
-def mostrarOpcion3():
+def salirDelPrograma():
     limpiarVentana()
-    label = tk.Label(ventana, text="Elegiste la Opción 1", font=("Arial", 16))
+    label = tk.Label(ventana, text="Salir del programa", font=("Arial", 16))
     label.pack(pady=20)
-
-    boton_volver = tk.Button(ventana, text="Volver", font=("Arial", 12), command=mostrarMenu)
-    boton_volver.pack(pady=10)
-
-def mostrarOpcion4():
-    limpiarVentana()
-    label = tk.Label(ventana, text="Elegiste la Opción 1", font=("Arial", 16))
-    label.pack(pady=20)
-
-    boton_volver = tk.Button(ventana, text="Volver", font=("Arial", 12), command=mostrarMenu)
-    boton_volver.pack(pady=10)
 
 
 def mostrarMenu():
@@ -38,16 +67,16 @@ def mostrarMenu():
     label = tk.Label(ventana, text="Menú Principal", font=("Arial", 18, "bold"))
     label.pack(pady=20)
 
-    boton1 = tk.Button(ventana, text="Opción 1", font=("Arial", 14), width=20, command=mostrarOpcion1)
+    boton1 = tk.Button(ventana, text="Graficar la función", font=("Arial", 14), width=20, command=graficarFuncion)
     boton1.pack(pady=10)
 
-    boton2 = tk.Button(ventana, text="Opción 2", font=("Arial", 14), width=20, command=mostrarOpcion2)
+    boton2 = tk.Button(ventana, text="Graficar puntos específicos de la función", font=("Arial", 14), width=20, command=graficarPuntos)
     boton2.pack(pady=10)
 
-    boton3 = tk.Button(ventana, text="Opción 2", font=("Arial", 14), width=20, command=mostrarOpcion3)
+    boton3 = tk.Button(ventana, text="Esncontrar raíces aproximadas a la función", font=("Arial", 14), width=20, command=encontrarRaices)
     boton3.pack(pady=10)
 
-    boton4 = tk.Button(ventana, text="Opción 2", font=("Arial", 14), width=20, command=mostrarOpcion4)
+    boton4 = tk.Button(ventana, text="Salir del programa", font=("Arial", 14), width=20, command=salirDelPrograma)
     boton4.pack(pady=10)
 
 
